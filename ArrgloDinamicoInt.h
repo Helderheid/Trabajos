@@ -14,8 +14,10 @@ class ArrgloDinamicoInt{
 	void mostrar(int size,int arr[]);
 
 	void vaciar(int size, int arr[]);
+	void ordenar(int size, int arr[]);
 };
 
 
 
 #endif // ARRGLODINAMICOINT_H
+
