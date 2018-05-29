@@ -25,23 +25,20 @@ void ArrgloDinamicoInt::insertar(int elem){
     data = nuevo;
 }
 
+
 void ArrgloDinamicoInt::insertarP(int elem,int pos){
 
     int aux =0;
-    int *nuevo = new int[size++];
+    int *nuevo = new int[size+1];
 
-    for(int i=0; i<size-1;i++){
+    for(int i=0; i<pos;i++)
         nuevo[i]=data[i];
-    }
-
-    for (int j=size-1; j>=pos,j--){
-        aux=data[j+1]; 
-        data[j+1]=data[j];
-        data[j]=aux;
-        if (j == 2){
-          data[j]=elem;
-        }
-    }
+        
+    nuevo[pos]=elem;
+    
+    for (int j=pos;j<size,j++)
+        nuevo[j+1]=data[j];
+    
     delete []data;
     data = nuevo;
 }
