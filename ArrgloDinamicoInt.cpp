@@ -49,8 +49,12 @@ void ArrgloDinamicoInt::mostrar(int size,int arr[]){
       cout << arr[i] <<endl;
     }
 }
-void ArrgloDinamicoInt::vaciar(int size, int arr[]){
 
+void ArrgloDinamicoInt::vaciar(){
+    int nuevo = new int[0];
+    size=0;
+    delete []data;
+    data=nuevo;
         }
 
 void ArrgloDinamicoInt::ordenar(int size, int arr[]){
