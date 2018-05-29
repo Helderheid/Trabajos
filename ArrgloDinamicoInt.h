@@ -15,6 +15,8 @@ class ArrgloDinamicoInt{
 	void mostrar(int size,int arr[]);
 	void vaciar();
 	void ordenar(int size, int arr[]);
+	void promedio(int size, int arr[]);
+
 };
 
 
