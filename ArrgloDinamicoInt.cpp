@@ -34,11 +34,14 @@ void ArrgloDinamicoInt::insertarP(int elem,int pos){
         nuevo[i]=data[i];
     }
 
-    for (int j=size-2; j>pos,j--){
-        aux=data[j];
-
+    for (int j=size-1; j>=pos,j--){
+        aux=data[j+1]; 
+        data[j+1]=data[j];
+        data[j]=aux;
+        if (j == 2){
+          data[j]=elem;
+        }
     }
-    nuevo[size-1]=elem;
     delete []data;
     data = nuevo;
 }
