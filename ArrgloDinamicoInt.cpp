@@ -72,3 +72,14 @@ void ArrgloDinamicoInt::ordenar(int size, int arr[]){
     }
 }
 
+void ArrgloDinamicoInt::promedio(int size, int arr[]){
+    double sum=0;
+    double prom=0;
+    for(int i=0;i<=size-1;i++){
+        sum= sum + arr[i];
+    }
+    prom=sum/(size-1);
+
+    cout <<prom <<endl;
+}
+
