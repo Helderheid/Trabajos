@@ -13,8 +13,7 @@ class ArrgloDinamicoInt{
 	void insertar(int elem);
 	void insertarP(int elem, int pos);
 	void mostrar(int size,int arr[]);
-
-	void vaciar(int size, int arr[]);
+	void vaciar();
 	void ordenar(int size, int arr[]);
 };
 
