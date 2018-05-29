@@ -10,7 +10,7 @@ ArrgloDinamicoInt::ArrgloDinamicoInt(int size, int arr[]){
 }
 
 ArrgloDinamicoInt::~ArrgloDinamicoInt(){
-    //dtor
+    delete []data;
 }
 
 void ArrgloDinamicoInt::insertar(int elem){
@@ -25,6 +25,24 @@ void ArrgloDinamicoInt::insertar(int elem){
     data = nuevo;
 }
 
+void ArrgloDinamicoInt::insertarP(int elem,int pos){
+
+    int aux =0;
+    int *nuevo = new int[size++];
+
+    for(int i=0; i<size-1;i++){
+        nuevo[i]=data[i];
+    }
+
+    for (int j=size-2; j>pos,j--){
+        aux=data[j];
+
+    }
+    nuevo[size-1]=elem;
+    delete []data;
+    data = nuevo;
+}
+
 
 void ArrgloDinamicoInt::mostrar(int size,int arr[]){
       for(int i=0;i<size;i++){
@@ -32,7 +50,7 @@ void ArrgloDinamicoInt::mostrar(int size,int arr[]){
     }
 }
 void ArrgloDinamicoInt::vaciar(int size, int arr[]){
-        data=0;
+
         }
 
 void ArrgloDinamicoInt::ordenar(int size, int arr[]){
@@ -50,5 +68,4 @@ void ArrgloDinamicoInt::ordenar(int size, int arr[]){
     cout << arr[i] <<endl;
     }
 }
-
 
