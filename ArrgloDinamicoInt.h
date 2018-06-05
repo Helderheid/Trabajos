@@ -12,11 +12,11 @@ class ArrgloDinamicoInt{
 
 	void insertar(int elem);
 	void insertarP(int elem, int pos);
-	void mostrar(int size,int arr[]);
+	void mostrar(int arr[]);
 	void vaciar();
-	void ordenar(int size, int arr[]);
-	void promedio(int size, int arr[]);
-
+	void ordenar(int arr[]);
+	void promedio(int arr[]);
+    	void eliminarP(int pos);
 };
 
 
