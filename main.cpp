@@ -6,12 +6,12 @@ int main()
 {
 
     int arr[] = {7,6,4,2};
-    ArrgloDinamicoInt(4,arr);
-
-
-
-    ArrgloDinamicoInt.ordenar(ArrgloDinamicoInt);
-
+    ArrgloDinamicoInt escalera(4,arr);
+    escalera.mostrar();
+    escalera.promedio();
+    escalera.ordenar();
+    escalera.mostrar();
 
 
 }
+
