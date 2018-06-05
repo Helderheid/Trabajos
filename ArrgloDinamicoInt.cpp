@@ -32,12 +32,12 @@ void ArrgloDinamicoInt::insertarP(int elem,int pos){
 
     for(int i=0; i<pos;i++)
         nuevo[i]=data[i];
-        
+
     nuevo[pos]=elem;
-    
+
     for (int j=pos;j<size,j++)
         nuevo[j+1]=data[j];
-    
+
     delete []data;
     data = nuevo;
 }
@@ -56,7 +56,7 @@ void ArrgloDinamicoInt::vaciar(){
     data=nuevo;
         }
 
-void ArrgloDinamicoInt::ordenar(int size, int arr[]){
+void ArrgloDinamicoInt::ordenar(int arr[]){
         int aux=0;
           for(int i=0;i<size;i++){
         for (int j=0; j<size-1; j++){
@@ -72,7 +72,7 @@ void ArrgloDinamicoInt::ordenar(int size, int arr[]){
     }
 }
 
-void ArrgloDinamicoInt::promedio(int size, int arr[]){
+void ArrgloDinamicoInt::promedio(int arr[]){
     double sum=0;
     double prom=0;
     for(int i=0;i<=size-1;i++){
@@ -81,5 +81,16 @@ void ArrgloDinamicoInt::promedio(int size, int arr[]){
     prom=sum/(size-1);
 
     cout <<prom <<endl;
+}
+
+void ArrgloDinamicoInt::eliminarP(int pos){
+    int *nuevo = new int[size];
+    for(int i=0; i<pos;i++){
+        nuevo[i]=data[i];
+    }
+
+    for(int j=pos;j<size-1,j++){
+        nuevo[j]=data[j+1];
+    }
 }
 
